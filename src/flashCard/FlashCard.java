@@ -1,10 +1,19 @@
 package flashCard;
-
+import java.util.Scanner;
 public class FlashCard {
     public static void main(String[] args) {
-        System.out.println("Card: ");
-        System.out.println("cat");
-        System.out.println("Definition: ");
-        System.out.println("кот");
+        Scanner scanner = new Scanner(System.in);
+        String card = scanner.nextLine();
+        String definition = scanner.nextLine();
+        System.out.println(card);
+        System.out.println(definition);
+        String ans = scanner.nextLine();
+        System.out.println(ans);
+        if(ans.equals(definition)){
+            System.out.println("Your answer is right!");
+        }
+        else{
+            System.out.println("Your answer is wrong...");
+        }
     }
 }
